@@ -7,6 +7,8 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
     }
         public static void task1 () {
             System.out.println("______Задача 1______");
@@ -86,13 +88,38 @@ public class Main {
             short receptOfChampion = (short) (bannanaMass * 5 + milkMass * 2 + icecreamMass * 2 + (eggMass * 4));
             float weightInKg = (bannanaMass*5 + milkMass*2 +icecreamMass*2 + eggMass*4)/1000f;
             System.out.println("Вес завтрака чемпиона в граммах равен " + receptOfChampion + " а в килограммах - " + weightInKg);
-
+        }
+        public static void task7 () {
+            System.out.println("______Задача 7______");
+            byte lishnieKg = 7;
+            short racion1 = 250; // при похудении на 250 грамм
+            short racion2 = 500; // при похудении на 500 грамм
+            short po1raciony = (short) ((lishnieKg*1000)/racion1);
+            short po2raciony = (short) ((lishnieKg*1000)/racion2);
+            short sredneeZnachenie = (short) ((po1raciony+po2raciony)/2);
+            System.out.println("Если спортсмен будет худеть по 250гр/день, он похудеет за " + po1raciony + " дней.");
+            System.out.println("Если спортсмен будет худеть по 500гр/день, он похудеет за " + po2raciony + " дней.");
+            System.out.println("В среднем спортсмен будет худеть похудеет за " + sredneeZnachenie + " дней.");
         }
 
-
-
-
-
+            public static void task8 () {
+            System.out.println("______Задача 8______");
+            int mishaSalary = 67760;
+            int denisSalary = 83690;
+            int kristinaSalary = 76230;
+            int increaseSalary = 10;
+            //повышаем всем зарплату
+            int mishaNewSal = (mishaSalary/increaseSalary + mishaSalary);
+            int denisNewSal = (denisSalary/increaseSalary + denisSalary);
+            int kristyNewSal = (kristinaSalary/increaseSalary + kristinaSalary);
+            //выщитываем годовую разницу в зарплате
+            int mishaDiffYear = (mishaNewSal%mishaSalary)*12;
+            int denisDiffYear = (denisNewSal%denisSalary)*12;
+            int kristyDiffYear = (kristyNewSal%kristinaSalary)*12;
+            System.out.println("Миша теперь получает " + mishaNewSal + " рублей. Годовой доход вырос на " + mishaDiffYear + " рублей!");
+            System.out.println("Денис теперь получает " + denisNewSal + " рублей. Годовой доход вырос на " + denisDiffYear + " рублей!");
+            System.out.println("Кристина теперь получает " + kristyNewSal + " рублей. Годовой доход вырос на " + kristyDiffYear + " рублей!");
+        }
 
 
     }
